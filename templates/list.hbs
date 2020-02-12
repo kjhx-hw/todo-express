@@ -7,9 +7,9 @@
         <div id="list">
             {{#if items}}
             <form method="POST">
-                {{#each items}}
+                {{#each items as |value key|}}
                 <label class="cb-label">
-                    <input type="checkbox" name="items[]" value="{{ name }}" {{#if checked}}checked{{/if}}>
+                    <input type="checkbox" name="item{{ key }}" value="done" {{#if done}}checked{{/if}}>
                     <span class="cb-fancy rectangular"></span>
                     {{ name }}
                 </label>
