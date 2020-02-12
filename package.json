@@ -1,0 +1,27 @@
+{
+  "name": "todo-express",
+  "version": "1.0.0",
+  "description": "Simple todo list application for COMP4310.",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node .",
+    "start:watch": "nodemon",
+    "clean": "rm -rf ./sessions"
+  },
+  "author": "kjhx",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "session-file-store": "^1.4.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "sessions/*"
+    ],
+    "verbose": "true"
+  }
+}

@@ -1,0 +1,32 @@
+<div class="container">
+    <header>
+        <h1>Todo List</h1>
+        <hr>
+    </header>
+    <main>
+        <div id="list">
+            {{#if items}}
+            <form method="POST">
+                {{#each items}}
+                <label class="cb-label">
+                    <input type="checkbox" name="items[]" value="{{ name }}" {{#if checked}}checked{{/if}}>
+                    <span class="cb-fancy rectangular"></span>
+                    {{ name }}
+                </label>
+                {{/each}}
+                <input type="submit" value="Save" formaction="/todo/save" />
+                <input type="submit" value="Remove Checked" formaction="/todo/remove" />
+            </form>
+            {{else}}
+            <p><strong>No to-do items.</strong></p>
+            <p>{{data}}</p>
+            {{/if}}
+        </div>
+        <p>Add new item:</p>
+        <form method="POST">
+            <input type="text" placeholder="Enter item description" style="width: 100%" name="item" required
+                autofocus />
+            <input type="submit" value="Add" formaction="/todo/add" />
+        </form>
+    </main>
+</div>
