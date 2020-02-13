@@ -7,7 +7,7 @@
     "start": "node .",
     "start:watch": "nodemon",
     "clean": "rm -rf ./sessions",
-    "test": "jest --env node lib/test"
+    "test": "mocha lib/test"
   },
   "author": "kjhx",
   "license": "MIT",
@@ -15,16 +15,20 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
-    "jest": "^25.1.0",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
-    "session-file-store": "^1.4.0",
-    "supertest": "^4.0.2"
+    "session-file-store": "^1.4.0"
   },
   "nodemonConfig": {
     "ignore": [
       "sessions/*"
     ],
     "verbose": "true"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cheerio": "^1.0.0-rc.3",
+    "mocha": "^7.0.1",
+    "supertest": "^4.0.2"
   }
 }
