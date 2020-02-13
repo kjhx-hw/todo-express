@@ -1,3 +1,3 @@
 # ![Logo Header](img/header.png)
 
-todo-list
+Kyle Huggins / COMP 4310 / P1
